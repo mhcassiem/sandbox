@@ -5,6 +5,9 @@ name = "pypi"
 
 [packages]
 pikepdf = "*"
+typer = "*"
+rich = "*"
+pyinquirer = "*"
 
 [dev-packages]
 

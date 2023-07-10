@@ -1,16 +1,20 @@
-# This is a sample Python script.
+import typer
+import subprocess
+from PyInquirer import prompt, print_json, Separator
+from rich import print as rprint
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+app = typer.Typer()
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+@app.command("hi")
+def sample_func():
+    rprint("[red bold]Hi[/red bold] [yellow]World[yello]")
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+
+@app.command("hello")
+def sample_func():
+    rprint("[red bold]Hello[/red bold] [yellow]World[yello]")
+
+
+if __name__ == "__main__":
+    app()
