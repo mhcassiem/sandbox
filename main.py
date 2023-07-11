@@ -20,12 +20,8 @@ def remove_pdf_pwd():
     rprint("[green bold]Enter PDF save location :[green bold]")
     pdf_save_loc = input()
     pdf_pwd = PDFPWD(pdf_loc, pdf_pass, pdf_save_loc, pdf_save)
-    pdf_pwd.open_pdf()
-    pdf_pwd.save_pdf()
-
-@app.command("hi")
-def sample_func():
-    rprint("[red bold]Hi[/red bold] [yellow]World[yello]")
+    pdf = pdf_pwd.open_pdf()
+    pdf_pwd.save_pdf(pdf)
 
 
 @app.command("hello")
